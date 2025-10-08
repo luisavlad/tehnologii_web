@@ -132,3 +132,29 @@ function calculeazaElement(pozitie) {
 
 // am considerat ca sirul incepe de la pozitia 0
 console.log(calculeazaElement(5)); // 1 1 2 3 5 8
+
+function nrAparitiiLitere(text) {
+  let frecventeLitere = new Array(122).fill(0);
+
+  for (let i = 0; i < text.length; i++) {
+    if (text[i].charCodeAt(0) >= 65 && text[i].charCodeAt(0) <= 90) {
+      frecventeLitere[text[i].charCodeAt(0)]++;
+    } else if (text[i].charCodeAt(0) >= 97 && text[i].charCodeAt(0) <= 122) {
+      frecventeLitere[text[i].charCodeAt(0)]++;
+    }
+  }
+
+  for (let i = 65; i < 121; i++) {
+    if (frecventeLitere[i] != 0) {
+      console.log(
+        `Litera ${String.fromCharCode(i)} apare de ${
+          frecventeLitere[i]
+        } ori, deci frecventa sa relativa la sir este de ${
+          Math.round((frecventeLitere[i] / text.length) * 1000) / 1000
+        }.`
+      );
+    }
+  }
+}
+
+nrAparitiiLitere("Buna ziua lume Bla bla!");
