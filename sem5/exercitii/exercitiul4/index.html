@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script>
+      window.onload = () => {
+        const header = document.getElementById("myHeader");
+        const event = new Event("myEvent");
+
+        const hoverHandler = () => {
+          document.dispatchEvent(event);
+        };
+
+        const myEventHandler = () => {
+          console.log("Woah hovering");
+        };
+
+        header.onmouseover = hoverHandler;
+        document.addEventListener("myEvent", myEventHandler);
+      };
+    </script>
+  </head>
+  <body>
+    <header id="myHeader">Hello!</header>
+  </body>
+</html>

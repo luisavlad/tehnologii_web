@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.onload = () => {
+        var table = document.getElementById("table1");
+        var form = document.getElementById("form1");
+
+        var formSubmitHandler = (e) => {
+          e.preventDefault();
+          var name = document.getElementById("nameInput").value;
+          var phone = document.getElementById("phoneInput").value;
+
+          var newRow = document.createElement("tr");
+
+          var newContactName = document.createElement("th");
+          newContactName.scope = "row";
+          newContactName.innerHTML = name;
+
+          var newContactPhone = document.createElement("td");
+          newContactPhone.innerHTML = phone;
+
+          newRow.appendChild(newContactName);
+          newRow.appendChild(newContactPhone);
+
+          table.appendChild(newRow);
+        };
+
+        form.onsubmit = formSubmitHandler;
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Agenda contacte</h1>
+    <table type="table" id="table1">
+      <tr>
+        <th scope="col">Nume</th>
+        <th scope="col">Telefon</th>
+      </tr>
+      <tr>
+        <th scope="row">Luisa Vlad</th>
+        <td>0700000000</td>
+      </tr>
+      <tr>
+        <th scope="row">Paul Ciuraru</th>
+        <td>0700000001</td>
+      </tr>
+    </table>
+    <h2>Add a new contact</h2>
+    <form type="form" id="form1">
+      <input type="text" id="nameInput" />
+      <input type="text" id="phoneInput" />
+      <button type="submit" id="submitButton">Add Contact</button>
+    </form>
+  </body>
+</html>
