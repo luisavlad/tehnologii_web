@@ -1,0 +1,11 @@
+tbody tr:nth-child(odd) {
+  background-color: violet;
+}
+
+tbody tr:first-child {
+  background-color: blue;
+}
+
+tbody tr:last-child {
+  background-color: green;
+}

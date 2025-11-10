@@ -1,0 +1,12 @@
+input {
+  margin: 0;
+}
+
+label {
+  display: inline-block;
+  border: 3px solid transparent;
+}
+
+label:has(:checked) {
+  border: 3px solid red;
+}

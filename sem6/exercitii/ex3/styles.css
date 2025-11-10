@@ -1,0 +1,43 @@
+.container {
+  width: 300px;
+  margin: 20px auto;
+}
+
+.row:has(h1) {
+  text-align: center;
+}
+
+.row:has(div) {
+  overflow: auto;
+}
+
+.top-left-square,
+.top-middle-square,
+.top-right-square,
+.middle-left-square,
+.middle-center-square,
+.middle-right-square,
+.bottom-left-square,
+.bottom-middle-square,
+.bottom-right-square {
+  background-color: lightgray;
+  height: 100px;
+  float: left;
+  width: 33.33%;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.row:has(.middle-left-square),
+.row:has(.bottom-left-square) {
+  margin-top: -2px;
+}
+
+.top-middle-square,
+.top-right-square,
+.middle-center-square,
+.middle-right-square,
+.bottom-middle-square,
+.bottom-right-square {
+  margin-left: -2px;
+}
