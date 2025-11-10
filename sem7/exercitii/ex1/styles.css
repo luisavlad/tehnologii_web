@@ -1,0 +1,32 @@
+h2 {
+  color: brown;
+}
+
+body {
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-container {
+  display: flex;
+}
+
+.column {
+  background-color: brown;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.column-item {
+  color: ghostwhite;
+  background-color: black;
+  font-weight: normal;
+}
+
+.column-item:hover {
+  color: darkred;
+  background-color: lightcoral;
+}

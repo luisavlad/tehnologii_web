@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      body {
+        margin: 0px;
+      }
+      .ui {
+        height: 100vh;
+      }
+      .menu {
+        height: 5vh;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        background-color: tomato;
+      }
+      .menu-item {
+        min-width: 200px;
+        border: 1px dashed gold;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .burger-menu {
+        display: none;
+      }
+
+      @media screen and (max-width: 400px) {
+        .menu {
+          display: none;
+        }
+        .burger-menu {
+          display: block;
+          position: fixed;
+          top: 10px;
+          left: 10px;
+          height: 3em;
+          width: 3em;
+          border-radius: 50%;
+          background-color: lightgray;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="ui">
+      <div class="menu">
+        <div class="menu-item">first</div>
+        <div class="menu-item">second</div>
+        <div class="menu-item">third</div>
+        <div class="menu-item">fourth</div>
+      </div>
+      <div class="burger-menu">≡</div>
+      <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
+        ex sapien vitae pellentesque sem placerat. In id cursus mi pretium
+        tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
+        Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis
+        massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper
+        vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra
+        inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing
+        elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id
+        cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam
+        urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
+        egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
+        hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
+        per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet
+        consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+        pellentesque sem placerat. In id cursus mi pretium tellus duis
+        convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
+        fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada
+        lacinia integer nunc posuere. Ut hendrerit semper vel class aptent
+        taciti sociosqu. Ad litora torquent per conubia nostra inceptos
+        himenaeos.
+      </div>
+    </div>
+  </body>
+</html>
